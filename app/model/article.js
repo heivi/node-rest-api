@@ -1,21 +1,13 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var ImageSchema = require(__base + 'app/model/ImageSchema');
 
 // Article
-var Images = new Schema({
-	kind: {
-		type: String,
-		enum: ['thumbnail', 'detail'],
-		required: true
-	},
-	url: { type: String, required: true }
-});
-
 var Article = new Schema({
 	title: { type: String, required: true },
 	author: { type: String, required: true },
 	description: { type: String, required: true },
-	images: [Images],
+	images: [ImageSchema],
 	modified: { type: Date, default: Date.now }
 });
 

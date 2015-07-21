@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 var debug = require('debug')('restapi');
 
-var libs = process.cwd() + '/libs/';
-var config = require(libs + 'config');
-var log = require(libs + 'log')(module);
-var app = require(libs + 'app');
+global.__base = __dirname + '/../';
+
+var config = require(__base + 'libs/config');
+var log = require(__base + 'libs/log')(module);
+var app = require(__base + 'app/app');
 
 app.set('port', config.get('port') || 3000);
 

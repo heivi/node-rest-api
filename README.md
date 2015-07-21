@@ -6,9 +6,9 @@ This is updated code that follows [RESTful API With Node.js + MongoDB](http://al
 
 ## Running project
 
-You need to have installed Node.js and MongoDB 
+You need to have installed Node.js and MongoDB
 
-### Install dependencies 
+### Install dependencies
 
 To install dependencies enter project folder and run following command:
 ```
@@ -17,7 +17,7 @@ npm install
 
 ### Creating demo data
 
-To create demo data in your MongoDB execute ```generateData.js``` file 
+To create demo data in your MongoDB execute ```generateData.js``` file
 ```
 node generateData.js
 ```
@@ -26,7 +26,7 @@ node generateData.js
 
 To run server execute:
 ```
-node bin/www 
+node bin/www
 ```
 
 ### Make Requests
@@ -47,7 +47,7 @@ Updating your article data:
 http PUT http://localhost:1337/api/articles/YOUR_ARTICLE_ID_HERE title=NewArticleUpdated author='John Doe' description='Lorem ipsum dolar sit amet' images:='[{"kind":"thumbnail", "url":"http://habrahabr.ru/images/write-topic.png"}, {"kind":"detail", "url":"http://habrahabr.ru/images/write-topic.png"}]' Authorization:'Bearer PUT_YOUR_TOKEN_HERE'
 ```
 
-Getting your data 
+Getting your data
 ```
 http http://localhost:1337/api/users/info Authorization:'Bearer PUT_YOUR_TOKEN_HERE'
 http http://localhost:1337/api/articles Authorization:'Bearer PUT_YOUR_TOKEN_HERE'
@@ -80,10 +80,11 @@ jshint libs/**/*.js generateData.js
 
 This example was created by Evgeny Aleksandrov ([@EAleksandrov](http://twitter.com/EAleksandrov)).
 
-Updated by: 
+Updated by:
 * [Istock Jared](https://github.com/IstockJared)
-* [Marko Arsić](http://portfolio.marsic.info/)  
+* [Marko Arsić](http://portfolio.marsic.info/)
+* [Heikki Virekunnas](https://github.com/heivi/)
 
 ## License
 
-[MIT](https://github.com/ealeksandrov/NodeAPI/blob/master/LICENSE)
+[MIT](https://github.com/heivi/node-rest-api/blob/master/LICENSE)
