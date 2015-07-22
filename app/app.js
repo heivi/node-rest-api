@@ -13,7 +13,7 @@ var oauth2 = require(__base + 'libs/auth/oauth2');
 
 var api = require(__base + 'app/routes/api');
 var users = require(__base + 'app/routes/users');
-var articles = require(__base + 'app/routes/articles');
+var entries = require(__base + 'app/routes/entries');
 
 var app = express();
 
@@ -26,7 +26,7 @@ app.use(passport.initialize());
 app.use('/', api);
 app.use('/api', api);
 app.use('/api/users', users);
-app.use('/api/articles', articles);
+app.use('/api/entries', entries);
 app.use('/api/oauth/token', oauth2.token);
 
 // catch 404 and forward to error handler

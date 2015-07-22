@@ -20,7 +20,11 @@ User = new Schema({
   created: {
     type: Date,
     default: Date.now
-  }
+  },
+  entries: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Entry'
+  }]
 });
 
 User.methods.encryptPassword = function(password) {
